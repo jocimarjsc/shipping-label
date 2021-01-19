@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Etiqueta Fisica</title>
+    <style type="text/css">
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            vertical-align: baseline;
+            list-style: none;
+            border: 0
+        }
+    </style>
+</head>
+
+<body>
+    <div style="background-color: #e7e7e7; display: -webkit-flex; justify-content: center;">
+        <div style="width: 595px; height: 842px; background-color: #fff; padding: 20px;">
+            <div style="width: 235px; border: 1px solid black; border-radius: 8px;">
+                <div style="width: 235px; display: flex; justify-content: center; padding: 5px; margin-top: 5px;">
+                    <img style="width: 52px; padding: 2px;" src="./logo.svg" alt="logo">
+                    <div style="border-right: 1px solid black; margin: 0 5.9px;"></div>
+                    <div style="display: flex; align-items: center; flex-direction: column; justify-content: center;">
+                        <span style="font-size: 10px; font-weight: 700;">Loja Várzea Grande</span>
+                        <p style="font-size: 8px; font-weight: 400; text-align: center;">Av. Couto Magalhães, 1889,
+                            Centro-Norte,Várzea Grande - MT, CEP 78110400</p>
+                    </div>
+                </div>
+                <div style="display: flex;  flex-direction: column; padding: 5px;">
+                    <div style="border-bottom: 1px solid black;"></div>
+                    <div style="display: flex; flex-direction: row; align-items: center;">
+                        <img style="width: 20px; height: 20px; background-color: #1877f2;" src="" alt="">
+                        <h2 style="font-size: 10px;">
+                            Detalhes da Entrega
+                        </h2>
+                    </div>
+                    <div style="display: flex; flex-direction: column; margin-top: 10px;">
+                        <div style="display: flex; flex-direction: row; align-items: center;">
+                            <span style="font-size: 8px;">
+                                Enviado pedido via:
+                            </span>
+                            <p style="font-size: 8px; font-weight: 800; margin-left: 5px;">
+                                Entrega - Lojas Grafitte - <%= pedido.enviado %>
+                            </p>
+                        </div>
+                        <div style="display: flex; flex-direction: row; align-items: center;">
+                            <span style="font-size: 8px;">
+                                NP - (Número do pedido):
+                            </span>
+                            <p style="font-size: 8px; font-weight: 800; margin-left: 5px;">
+                                #<%= pedido.codigoPedido %>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="display: flex;  flex-direction: column; padding: 5px;">
+                    <div style="border-bottom: 1px solid black;"></div>
+                    <div style="display: flex; flex-direction: row; align-items: center;">
+                        <img style="width: 20px; height: 20px; background-color: #1877f2;" src="" alt="">
+                        <h2 style="font-size: 10px;">
+                            Dados Cliente
+                        </h2>
+                    </div>
+                    <div style="display: flex; flex-direction: column; margin-top: 10px;">
+                        <div style="display: flex; flex-direction: row; align-items: center;">
+                            <span style="font-size: 8px;">
+                                Nome:
+                            </span>
+                            <p style="font-size: 8px; font-weight: 800; margin-left: 5px;">
+                                <%= client.nome %>
+                            </p>
+                        </div>
+                        <div style="display: flex; flex-direction: row; align-items: center;">
+                            <span style="font-size: 8px;">
+                                CPF:
+                            </span>
+                            <p style="font-size: 8px; font-weight: 800; margin-left: 5px;">
+                                <%= client.nome %>
+                            </p>
+                        </div>
+                        <div style="display: flex; flex-direction: row; align-items: center;">
+                            <span style="font-size: 8px;">
+                                E-mail:
+                            </span>
+                            <p style="font-size: 8px; font-weight: 800; margin-left: 5px;">
+                                <%= client.email %>
+                            </p>
+                        </div>
+                        <div style="display: flex; flex-direction: row; align-items: center;">
+                            <span style="font-size: 8px;">
+                                Celular:
+                            </span>
+                            <p style="font-size: 8px; font-weight: 800; margin-left: 5px;">
+                                <%= client.celular %>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="display: flex;  flex-direction: column; padding: 5px;">
+                    <div style="border-bottom: 1px solid black;"></div>
+                    <div style="display: flex; flex-direction: row; align-items: center;">
+                        <img style="width: 20px; height: 20px; background-color: #1877f2;" src="" alt="">
+                        <h2 style="font-size: 10px;">
+                            Endereço de Entrega
+                        </h2>
+                    </div>
+                    <div style="display: flex; flex-direction: column; margin-top: 10px;">
+                        <div style="display: flex; flex-direction: row; align-items: center;">
+                            <span style="font-size: 8px;">
+                                Endereço:
+                            </span>
+                            <p style="font-size: 8px; font-weight: 800; margin-left: 5px;">
+                                <%= entrega.endereco %>
+                            </p>
+                        </div>
+                        <div style="display: flex; flex-direction: row; align-items: center;">
+                            <span style="font-size: 8px;">
+                                Número:
+                            </span>
+                            <p style="font-size: 8px; font-weight: 800; margin-left: 5px;">
+                                <%= entrega.numero %>
+                            </p>
+                        </div>
+                        <div style="display: flex; flex-direction: row; align-items: center;">
+                            <span style="font-size: 8px;">
+                                Bairro:
+                            </span>
+                            <p style="font-size: 8px; font-weight: 800; margin-left: 5px;">
+                                <%= entrega.bairro %>
+                            </p>
+                        </div>
+                        <div style="display: flex; flex-direction: row; align-items: center;">
+                            <span style="font-size: 8px;">
+                                Cidade:
+                            </span>
+                            <p style="font-size: 8px; font-weight: 800; margin-left: 5px;">
+                                <%= entrega.cidade %>
+                            </p>
+                        </div>
+                        <div style="display: flex; flex-direction: row; align-items: center;">
+                            <span style="font-size: 8px;">
+                                Estado:
+                            </span>
+                            <p style="font-size: 8px; font-weight: 800; margin-left: 5px;">
+                                <%= entrega.estado %>
+                            </p>
+                        </div>
+                        <div style="display: flex; flex-direction: row; align-items: center;">
+                            <span style="font-size: 8px;">
+                                CEP:
+                            </span>
+                            <p style="font-size: 8px; font-weight: 800; margin-left: 5px;">
+                                <%= entrega.cep %>
+                            </p>
+                        </div>
+                        <div style="display: flex; flex-direction: row; align-items: center;">
+                            <span style="font-size: 8px;">
+                                Complemento:
+                            </span>
+                            <p style="font-size: 8px; font-weight: 800; margin-left: 5px;">
+                                <%= entrega.complemento %>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+</body>
+
+</html>

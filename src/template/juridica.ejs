@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Etiqueta</title>
+    <style>
+        * {
+            margin: 0;
+            box-sizing: border-box;
+            padding: 0;
+        }
+
+        body {
+            background-color: rgb(204, 201, 201);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 100px;
+        }
+
+        .card {
+            width: 255px;
+            height: 340px;
+            border: 1px solid #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 50px;
+        }
+
+        p {
+            color: #717171;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="card">
+        <p>Nome: <%= client.razao %></p>
+        <p>Telefone: <%= client.celular %></p>
+        <p>CNPJ: <%= client.cnpj %></p>
+        <p>CEP: <%= entrega.cep %></p>
+        <p>Pedido: <strong>#<%= pedido.codigoPedido %></strong></p>
+    </div>
+</body>
+
+</html>
