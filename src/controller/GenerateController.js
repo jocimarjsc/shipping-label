@@ -5,9 +5,7 @@ module.exports = {
         const { pedido: id } = request.body
         const access_token = request.access_token;
 
-        const {data: { Order }} = await api.get(`/orders/${id}/complete?access_token=${access_token}`);
-
-        console.log(Order.Customer.CustomerAddresses[0].CustomerAddress.neighborhood);
+        const {data: { Order }} = await api.get(`/orders/${id}/complete?access_token=${access_token}`)
         
         const data = {
             pedido: {
